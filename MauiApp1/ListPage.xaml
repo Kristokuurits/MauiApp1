@@ -1,0 +1,19 @@
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiApp1"
+             x:Class="MauiApp1.ListPage"
+             Title="Asjade loetelu">
+
+    <StackLayout>
+        <ListView x:Name="ItemsListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Entry x:Name="NewItemEntry" Placeholder="Lisa uus ese"/>
+        <Button Text="Lisa" Clicked="OnAddButtonClicked"/>
+    </StackLayout>
+</ContentPage>
